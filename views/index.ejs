@@ -2,6 +2,45 @@
 <%- include('include/_header.ejs') %>
 <!-- include header -->
 
+
+  <!-- main site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">New User  <i class="fas fa-user"></i></span>
+            </a>
+        </div>
+
+        <!-- form handaling -->
+        <form action="" method="post" >
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>@Email</th>
+                        <th>GENDER</th>
+                        <th> Status</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+
+                    <%- include('include/_show.ejs') %>
+
+                </tbody>
+            </table>
+        </form>
+        <!-- form handaling -->
+
+    </div>
+</main>
+<!-- main site -->
+
+
 <!-- include footer -->
 <%- include('include/_footer.ejs') %>
 <!-- include footer -->
+
