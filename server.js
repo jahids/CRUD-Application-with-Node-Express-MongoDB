@@ -31,7 +31,7 @@ app.use('/css', express.static(path.resolve(__dirname, "assets/img")))
 
 
 app.get('/', (req,res)=> {
-    res.send('Crud Application');
+    res.render('index')
 })
 
 app.listen(PORT,()=>{
