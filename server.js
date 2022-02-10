@@ -24,23 +24,15 @@ app.set("view engine" , "ejs")
 
 // load assets connect js img and css
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
-app.use('/css', express.static(path.resolve(__dirname, "assets/js")))
-app.use('/css', express.static(path.resolve(__dirname, "assets/img")))
+app.use('/img', express.static(path.resolve(__dirname, "assets/js")))
+app.use('/js', express.static(path.resolve(__dirname, "assets/img")))
 
 
 
+// load routers
+    app.use('/',require('./server/routes/router'))
 
-app.get('/', (req,res)=> {
-    res.render('index')
-})
 
-app.get('/add-user', (req, res)=> {
-    res.render('add_user')
-})
-
-app.get('/update-user', (req, res)=> {
-    res.render('update_user')
-})
 
 app.listen(PORT,()=>{
     console.log(`server is runnig on http://localhost:${PORT}`)})
