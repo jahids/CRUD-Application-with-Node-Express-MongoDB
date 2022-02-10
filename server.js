@@ -30,7 +30,9 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/img")))
 
 
 // load routers
-    app.use('/',require('./server/routes/router'))
+app.use('/',require('./server/routes/router'))
+
+
 
 
 
