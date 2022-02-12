@@ -3,6 +3,10 @@ const route = express.Router();
 
 const services = require('../services/render');
 
+const controller =require('../controller/controller');
+
+// database name admin
+// database pass 9N2c04b6xyyW34cz
 
 /**
  *  @description Root Route
@@ -25,15 +29,11 @@ route.get('/add-user', services.add_user);
 route.get('/update-user', services.update_user);
 
 
+route.post('/api/users', controller.create);
+route.get('/api/users', controller.find);
+route.put('/api/users/:id', controller.update);
+route.delete('/api/users/:id', controller.delete);
 
 
-// route.get('/add-user', (req, res)=> {
-//     res.render('add_user')
-// })
-
-
-// route.get('/update-user', (req, res)=> {
-//     res.render('update_user')
-// })
 
 module.exports = route
